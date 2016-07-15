@@ -1,8 +1,8 @@
 <template name="uploadImage">
-<div class='form-group {{#if afFieldIsInvalid name="imageId"}}has-error{{/if}}'> 
-{{#if $gt image.count 0}}
-{{#each image}}
-{{> afFieldInput type="hidden" name="imageId" value=_id}}
+<div class='form-group {{#if afFieldIsInvalid name="profilePicId"}}has-error{{/if}}'> 
+{{#if $gt profilePic.count 0}}
+{{#each profilePic}}
+{{> afFieldInput type="hidden" name="profilePicId" value=_id}}
   <label>Your Image</label>
   <div>
  {{> uploadImageDemo}}
@@ -17,7 +17,7 @@
     {{/with}}
   {{else}}
     <label>Upload your Image</label>
-    {{#if afFieldIsInvalid name="imageId"}}<span class="help-block">Image is required</span>{{/if}}
+    {{#if afFieldIsInvalid name="profilePicId"}}<span class="help-block">Image is required</span>{{/if}}
     <input class="form-control" id="capture" type="file" accept="image/*" capture="camera"/>
   {{/if}}
 {{/if}}

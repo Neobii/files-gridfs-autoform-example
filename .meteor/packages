@@ -25,3 +25,5 @@ aldeed:simple-schema
 twbs:bootstrap
 aldeed:collection2
 raix:handlebar-helpers
+dburles:collection-helpers
+accounts-base

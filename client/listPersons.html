@@ -1,6 +1,8 @@
 <template name="listPersons">
 {{#each persons}}
-	<h2>Name</h2>
-	<img/>
+	<div class="jumbotron">
+		<h2>{{name}}</h2>
+		{{#each profilePic}}<img src="{{fileURL .}}"/>{{/each}}
+	</div>
 {{/each}}
 </template>
