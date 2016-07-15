@@ -1,13 +1,13 @@
 <template name="uploadImage">
-<div class='form-group {{#if afFieldIsInvalid name="officerProfile.departmentIdId"}}has-error{{/if}}'> 
-{{#if $gt departmentId.count 0}}
-{{#each departmentId}}
-{{> afFieldInput type="hidden" name="officerProfile.departmentIdId" value=_id}}
-  <label>Your department ID</label>
+<div class='form-group {{#if afFieldIsInvalid name="imageId"}}has-error{{/if}}'> 
+{{#if $gt image.count 0}}
+{{#each image}}
+{{> afFieldInput type="hidden" name="imageId" value=_id}}
+  <label>Your Image</label>
   <div>
- {{> uploadDepartmentIdDemo}}
+ {{> uploadImageDemo}}
  </div>
- <a data-action="remove-department-id">Remove</a>
+ <a data-action="remove-image">Remove</a>
 {{/each}}
 {{else}}
 {{#if currentUpload}}
@@ -16,10 +16,9 @@
       <span id="progress">{{progress}}%</span>
     {{/with}}
   {{else}}
-    <label>Upload your Department Id</label>
-    {{#if afFieldIsInvalid name="officerProfile.departmentIdId"}}<span class="help-block">Deparment ID is required</span>{{/if}}
+    <label>Upload your Image</label>
+    {{#if afFieldIsInvalid name="imageId"}}<span class="help-block">Image is required</span>{{/if}}
     <input class="form-control" id="capture" type="file" accept="image/*" capture="camera"/>
-    <a data-toggle="popover" data-trigger="hover">Agency restrictions?</a>
   {{/if}}
 {{/if}}
 </div>

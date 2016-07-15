@@ -1,5 +1,5 @@
 Template.uploadImage.onCreated(function () {
-  this.departmentIdId = new ReactiveVar(false);
+  this.imageId = new ReactiveVar(false);
   this.currentUpload = new ReactiveVar(false);
 });
 
@@ -9,28 +9,28 @@ Template.uploadImage.helpers({
   currentUpload: function () {
     return Template.instance().currentUpload.get();
   },
-  departmentIdId() {
-    return Template.instance().departmentIdId.get();
+  imageId() {
+    return Template.instance().imageId.get();
   },
-  departmentIds() {
-    return DepartmentIds.find({}).cursor;
+  images() {
+    return Images.find({}).cursor;
   },
-  departmentId() {
-    var depId = Template.instance().departmentIdId.get();
-    var depFile = DepartmentIds.find({_id: depId});
-    return depFile.cursor;
+  image() {
+    let imgId = Template.instance().imageId.get();
+    let image = Images.find({_id: imgId});
+    return image.cursor;
   }
 });
 
 Template.uploadImage.events({
-  'click [data-action="remove-department-id"]'(e, t) {
-    t.departmentIdId.set(false);
+  'click [data-action="remove-image"]'(e, t) {
+    t.imageId.set(false);
   },
   'change #capture': function (e, template) {
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       // We upload only one file, in case 
       // multiple files were selected
-      var upload = DepartmentIds.insert({
+      var upload = Images.insert({
         file: e.currentTarget.files[0],
         streams: 'dynamic',
         chunkSize: 'dynamic'
@@ -45,7 +45,7 @@ Template.uploadImage.events({
           //alert('Error during upload: ' + error);
         } else {
           //alert('File "' + fileObj.name + '" successfully uploaded');
-          template.departmentIdId.set(fileObj._id);
+          template.imageId.set(fileObj._id);
         }
         template.currentUpload.set(false);
       });

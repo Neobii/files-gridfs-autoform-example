@@ -1,0 +1,7 @@
+<template name="newPerson">
+{{#autoForm collection="Persons" type="insert" id="insertPerson"}}
+	{{> afQuickField name="name"}}
+	{{> uploadImage}}
+	<button class="btn btn-primary" type="submit">Submit</button>
+{{/autoForm}}
+</template>

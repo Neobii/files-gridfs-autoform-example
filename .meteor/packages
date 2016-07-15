@@ -23,3 +23,5 @@ ostrio:files
 aldeed:autoform
 aldeed:simple-schema
 twbs:bootstrap
+aldeed:collection2
+raix:handlebar-helpers
