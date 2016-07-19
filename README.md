@@ -6,7 +6,7 @@ For now I'm this a working example of https://github.com/VeliovGroup/Meteor-File
 
 This is how you define your file upload input.  Make sure to reference https://github.com/VeliovGroup/Meteor-Files on how to set up your collections.
 
-Don't forget to meteor npm install to install gridFS deps!
+###Don't forget to meteor npm install to install gridFS deps!
 
 ```javascript
 profilePicId: {
@@ -24,4 +24,5 @@ profilePicId: {
 Any pull requests welcome.
 
 ###TODO
-The biggest thing I need to do before I package this up, is the ability to specify collection in the afFieldInput definition
+I need to be able to clear the uploaded files demo on successful form submission.
+Also I need to be able to specify different demo templates based on file types.
