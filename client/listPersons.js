@@ -7,5 +7,8 @@ Template.listPersons.onCreated(function(){
 Template.listPersons.helpers({
 	persons() {
 		return Persons.find({});
+	},
+	getFormId() {
+		return "updatePerson" + this._id;
 	}
 })

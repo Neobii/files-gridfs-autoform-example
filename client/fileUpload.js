@@ -1,6 +1,6 @@
 Template.afFileUpload.onCreated(function () {
   this.collectionName = () => this.data.atts.collection
-  this.fileId = new ReactiveVar(false);
+  this.fileId = new ReactiveVar(this.data.value);
   this.currentUpload = new ReactiveVar(false);
 });
 
