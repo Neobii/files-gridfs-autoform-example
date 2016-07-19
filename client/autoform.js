@@ -1,7 +1,7 @@
 AutoForm.addInputType("fileUpload", {
   template: "afFileUpload",
   valueOut: function () {
-    return this.imageId();
+    return this.value();
   },
   valueConverters: {
     "stringArray": AutoForm.valueConverters.stringToStringArray,

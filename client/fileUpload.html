@@ -1,8 +1,6 @@
 <template name="afFileUpload">
-<div class='form-group {{#if afFieldIsInvalid name=../fieldName}}has-error{{/if}}'> 
 {{#if $gt uploadedImage.count 0}}
 {{#each uploadedImage}}
-{{> afFieldInput type="hidden" name=../fieldName value=_id}}
   <label>Your Image</label>
   <div>
  {{> uploadImageDemo}}
@@ -17,9 +15,7 @@
     {{/with}}
   {{else}}
     <label>Upload your Image</label>
-    {{#if afFieldIsInvalid name=../fieldName}}<span class="help-block">Image is required</span>{{/if}}
-    <input class="form-control" type="file" accept="image/*" capture="camera" value="{{this.value}}" {{this.atts}}/>
+    <input class="form-control" type="file" accept="image/*" capture="camera" value="{{imageId.get}}"/>
   {{/if}}
 {{/if}}
-</div>
 </template>
