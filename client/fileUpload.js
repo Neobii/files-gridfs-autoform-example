@@ -1,11 +1,11 @@
-Template.uploadImage.onCreated(function () {
+Template.afFileUpload.onCreated(function () {
   this.imageId = new ReactiveVar(false);
   this.currentUpload = new ReactiveVar(false);
 });
 
 
 
-Template.uploadImage.helpers({
+Template.afFileUpload.helpers({
   currentUpload: function () {
     return Template.instance().currentUpload.get();
   },
@@ -19,7 +19,7 @@ Template.uploadImage.helpers({
   }
 });
 
-Template.uploadImage.events({
+Template.afFileUpload.events({
   'click [data-action="remove-image"]'(e, t) {
     t.imageId.set(false);
   },
