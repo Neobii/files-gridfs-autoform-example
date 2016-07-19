@@ -1,5 +1,5 @@
 Template.uploadImage.onCreated(function () {
-  this.profilePicId = new ReactiveVar(false);
+  this.imageId = new ReactiveVar(false);
   this.currentUpload = new ReactiveVar(false);
 });
 
@@ -9,11 +9,11 @@ Template.uploadImage.helpers({
   currentUpload: function () {
     return Template.instance().currentUpload.get();
   },
-  profilePicId() {
-    return Template.instance().profilePicId.get();
+  imageId() {
+    return Template.instance().imageId.get();
   },
-  profilePic() {
-    let imgId = Template.instance().profilePicId.get();
+  uploadedImage() {
+    let imgId = Template.instance().imageId.get();
     let image = Images.find({_id: imgId});
     return image.cursor;
   }
@@ -21,7 +21,7 @@ Template.uploadImage.helpers({
 
 Template.uploadImage.events({
   'click [data-action="remove-image"]'(e, t) {
-    t.profilePicId.set(false);
+    t.imageId.set(false);
   },
   'change #capture': function (e, template) {
     if (e.currentTarget.files && e.currentTarget.files[0]) {
@@ -42,7 +42,7 @@ Template.uploadImage.events({
           //alert('Error during upload: ' + error);
         } else {
           //alert('File "' + fileObj.name + '" successfully uploaded');
-          template.profilePicId.set(fileObj._id);
+          template.imageId.set(fileObj._id);
         }
         template.currentUpload.set(false);
       });

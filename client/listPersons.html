@@ -1,6 +1,6 @@
 <template name="listPersons">
 {{#each persons}}
-	<div class="jumbotron">
+	<div class="jumbotron" style='background-image: url("{{#each backgroundPic}}{{fileURL .}}{{/each}}");'>
 		<h2>{{name}}</h2>
 		{{#each profilePic}}<img src="{{fileURL .}}"/>{{/each}}
 	</div>
