@@ -2,7 +2,7 @@
 <div class='form-group {{#if afFieldIsInvalid name="profilePicId"}}has-error{{/if}}'> 
 {{#if $gt profilePic.count 0}}
 {{#each profilePic}}
-{{> afFieldInput type="hidden" name="profilePicId" value=_id}}
+{{> afFieldInput type="hidden" name=../fieldName value=_id}}
   <label>Your Image</label>
   <div>
  {{> uploadImageDemo}}

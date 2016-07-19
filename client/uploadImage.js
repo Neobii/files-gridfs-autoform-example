@@ -9,9 +9,6 @@ Template.uploadImage.helpers({
   currentUpload: function () {
     return Template.instance().currentUpload.get();
   },
-  images() {
-    return Images.find({}).cursor;
-  },
   profilePicId() {
     return Template.instance().profilePicId.get();
   },
