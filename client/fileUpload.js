@@ -23,7 +23,7 @@ Template.afFileUpload.events({
   'click [data-action="remove-image"]'(e, t) {
     t.imageId.set(false);
   },
-  'change #capture': function (e, template) {
+  'change .af-file-upload-capture': function (e, template) {
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       // We upload only one file, in case 
       // multiple files were selected
