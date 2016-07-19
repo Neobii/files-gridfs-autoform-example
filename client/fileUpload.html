@@ -2,16 +2,19 @@
 <input value="{{imageId}}" type="hidden" {{this.atts}}>
 {{#if $gt uploadedImage.count 0}}
 {{#each uploadedImage}}
-  <label>Your Image</label>
   <div>
  {{> uploadImageDemo}}
  </div>
  <a data-action="remove-image">Remove</a>
 {{/each}}
-{{/if}}
+{{else}}
+  {{#if currentUpload}}
   {{#with currentUpload}}
     Uploading <b>{{file.name}}</b>: 
     <span class="progress">{{progress}}%</span>
   {{/with}}
+  {{else}}
   <input class="form-control af-file-upload-capture" type="file" accept="image/*" capture="camera"/>
+  {{/if}}
+{{/if}}
 </template>
