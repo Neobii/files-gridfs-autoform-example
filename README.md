@@ -7,6 +7,7 @@ For now I'm this a working example of https://github.com/VeliovGroup/Meteor-File
 This is how you define your file upload input.  Make sure to reference https://github.com/VeliovGroup/Meteor-Files on how to set up your collections.
 
 ###Don't forget to meteor npm install to install gridFS deps!
+###Also don't forget to clone https://github.com/VeliovGroup/meteor-autoform-file into your packages directory
 
 ```javascript
 profilePicId: {
