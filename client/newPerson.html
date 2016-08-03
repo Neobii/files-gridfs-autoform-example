@@ -1,8 +1,8 @@
 <template name="newPerson">
-{{#autoForm collection="Persons" type="insert" id="insertPerson"}}
-	{{> afQuickField name="name"}}
-	{{> afQuickField name="profilePicId"}}
-	{{> afQuickField name="backgroundPicId"}}
-	<button class="btn btn-primary" type="submit">Submit</button>
-{{/autoForm}}
+  {{#autoForm collection="Persons" type="insert" id="insertPerson"}}
+    {{> afQuickField name="name"}}
+    {{> afQuickField name="profilePicId"}}
+    {{> afQuickField name="backgroundPicId"}}
+    <button class="btn btn-primary" type="submit">Submit</button>
+  {{/autoForm}}
 </template>
