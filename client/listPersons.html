@@ -1,9 +1,11 @@
 <template name="listPersons">
-{{#each persons}}
-	{{> quickForm type="update" collection="Persons" doc=this id=getFormId}}
-	<div class="jumbotron" style='background-image: url("{{#each backgroundPic}}{{fileURL .}}{{/each}}");'>
-		<h2>{{name}}</h2>
-		{{#each profilePic}}<img src="{{fileURL .}}"/>{{/each}}
-	</div>
-{{/each}}
+  {{#each persons}}
+    {{> quickForm type="update" collection="Persons" doc=this id=getFormId}}
+    <div class="jumbotron" style='background-image: url("{{#each backgroundPic}}{{fileURL .}}{{/each}}");'>
+      <h2>{{name}}</h2>
+      {{#each profilePic}}
+        <img src="{{fileURL .}}"/>
+      {{/each}}
+    </div>
+  {{/each}}
 </template>
