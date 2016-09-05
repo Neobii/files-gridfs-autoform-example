@@ -1,0 +1,13 @@
+<template name="uploadField">
+  {{#if file}}
+    Uploading <b>{{file.name}}</b>: {{progress.get}}%
+    <div>
+      <progress value="{{progress.get}}" max="100"></progress>
+    </div>
+  {{else}}
+    <button class="btn btn-primary input-container">
+      Select File
+      <input data-files-collection-upload type="file" />
+    </button>
+  {{/if}}
+</template>
