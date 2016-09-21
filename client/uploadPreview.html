@@ -1,0 +1,11 @@
+<template name="uploadPreview">
+  <div>
+    {{#if isImage}}
+      <img style="width:50%;max-width:250px;max-height:250px;" src="{{link}}"/>
+    {{else}}
+      <a href="{{link}}?download=true" target="_top">{{name}}</a>
+    {{/if}}
+  </div>
+  <a data-reset-file href="#" style="display:none">Reset</a>
+  <a data-remove-file href="#">Remove</a>
+</template>
