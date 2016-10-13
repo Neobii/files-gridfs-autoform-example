@@ -13,7 +13,7 @@ Template.listPersons.helpers({
     return "updatePerson" + this._id;
   },
   update(_id) {
-    return Template.instance().update.get() === _id
+    return Template.instance().update.get() === _id;
   }
 });
 

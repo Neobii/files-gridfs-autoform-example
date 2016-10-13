@@ -4,10 +4,10 @@
       {{> quickForm type="update" collection="Persons" doc=this id=getFormId}}
       <button data-button-update class="btn btn-danger">Cancel</button>
     {{else}}
-      <div class="jumbotron" style='background-image: url("{{#each backgroundPic}}{{fileURL .}}{{/each}}");'>
+      <div class="jumbotron" style='background-image: url("{{#each backgroundPic.each}}{{link}}{{/each}}");'>
         <h2>{{name}}</h2>
-        {{#each profilePic}}
-          <img style="max-width:150px;max-height:150px" src="{{fileURL .}}"/>
+        {{#each profilePic.each}}
+          <img style="max-width:150px;max-height:150px" src="{{link}}"/>
         {{/each}}
       </div>
       <button data-button-update class="btn btn-default">Update</button>
