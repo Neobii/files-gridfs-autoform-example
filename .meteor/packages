@@ -24,7 +24,7 @@ ostrio:files
 aldeed:autoform
 aldeed:simple-schema
 twbs:bootstrap
-aldeed:collection2
+aldeed:collection2@2.7.1
 raix:handlebar-helpers
 dburles:collection-helpers
 accounts-base@1.2.14
