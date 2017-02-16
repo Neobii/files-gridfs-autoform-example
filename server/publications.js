@@ -1,3 +1,3 @@
-Meteor.publish("persons", function(){
-	return Persons.find()
-})
+Meteor.publish('persons', () => {
+  return Persons.find();
+});

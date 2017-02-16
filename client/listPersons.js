@@ -1,7 +1,7 @@
 Template.listPersons.onCreated(function(){
   this.update = new ReactiveVar(false);
   this.autorun(() => {
-    this.subscribe("persons");
+    this.subscribe('persons');
   });
 });
 
@@ -10,7 +10,7 @@ Template.listPersons.helpers({
     return Persons.find({});
   },
   getFormId() {
-    return "updatePerson" + this._id;
+    return 'updatePerson' + this._id;
   },
   update(_id) {
     return Template.instance().update.get() === _id;
