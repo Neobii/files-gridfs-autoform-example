@@ -5,9 +5,9 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "babel-runtime": "^6.22.0",
+    "babel-runtime": "^6.26.0",
     "gridfs-stream": "^1.1.1",
-    "meteor-node-stubs": "^0.2.4",
-    "simpl-schema": "^0.2.3"
+    "meteor-node-stubs": "^0.3.2",
+    "simpl-schema": "^0.3.2"
   }
 }
