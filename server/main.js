@@ -1,6 +1,8 @@
-import { Meteor } from 'meteor/meteor';
+import { Meteor }         from 'meteor/meteor';
+import { MongoInternals } from 'meteor/mongo';
+
 import grid from 'gridfs-stream';
 
-Gfs = null;
-const mongo = MongoInternals.NpmModules.mongodb.module;
-Gfs = grid(Meteor.users.rawDatabase(), mongo);
+const Gfs = grid(Meteor.users.rawDatabase(), MongoInternals.NpmModules.mongodb.module);
+
+export { Gfs };

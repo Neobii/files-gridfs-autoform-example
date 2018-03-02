@@ -1,3 +1,9 @@
+import { Template }      from 'meteor/templating';
+import { Persons }       from '/lib/persons.js';
+import { ReactiveVar }   from 'meteor/reactive-var';
+
+window.Persons = Persons;
+
 Template.listPersons.onCreated(function(){
   this.update = new ReactiveVar(false);
   this.autorun(() => {
