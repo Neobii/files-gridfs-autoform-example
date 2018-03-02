@@ -5,7 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0",
+    "@babel/runtime": "^7.0.0-beta.40",
+    "core-js": "^2.5.3",
     "gridfs-stream": "^1.1.1",
     "meteor-node-stubs": "^0.3.2",
     "simpl-schema": "^0.3.2"
